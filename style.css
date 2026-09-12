@@ -22,3 +22,11 @@
 .hero-side-copy span {
   color: #ffffff;
 }
+/* Prevent fixed header from covering section content */
+html {
+  scroll-padding-top: 215px;
+}
+
+section[id] {
+  scroll-margin-top: 215px;
+}
