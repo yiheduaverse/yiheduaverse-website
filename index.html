@@ -111,8 +111,31 @@
 <footer><div class="wrap footer"><div><b>Yihe DuaVerse</b><span>Your Bridge to Chinese Sourcing</span></div><div>IN COLLABORATION WITH<br><strong>YIHE International Trade Service (Foshan) Co., Ltd.</strong></div><div>© <span id="year"></span> Yihe DuaVerse</div></div></footer>
 <script>
 const nav=document.getElementById('nav');
-document.getElementById('menu').onclick=()=>nav.classList.toggle('open');
-document.querySelectorAll('#nav a').forEach(a=>a.onclick=()=>nav.classList.remove('open'));
+const header=document.querySelector('.site-header');
+const menu=document.getElementById('menu');
+menu.onclick=()=>nav.classList.toggle('open');
+
+// Scroll to sections with enough space for the sticky two-row header.
+function goToSection(id){
+  const target=document.querySelector(id);
+  if(!target) return;
+  const headerHeight=header.offsetHeight;
+  const targetTop=target.getBoundingClientRect().top + window.pageYOffset - headerHeight - 8;
+  window.scrollTo({top:Math.max(0,targetTop),behavior:'smooth'});
+  nav.classList.remove('open');
+}
+
+document.querySelectorAll('a[href^="#"]').forEach(a=>{
+  a.addEventListener('click',function(e){
+    const href=this.getAttribute('href');
+    if(href && href.length>1 && document.querySelector(href)){
+      e.preventDefault();
+      history.pushState(null,'',href);
+      goToSection(href);
+    }
+  });
+});
+
 document.getElementById('year').textContent=new Date().getFullYear();
 function send(e){e.preventDefault();const body=`Name: ${document.getElementById('name').value}\nCompany: ${document.getElementById('company').value}\nEmail: ${document.getElementById('email').value}\nPhone/WhatsApp: ${document.getElementById('phone').value}\n\nRequirement:\n${document.getElementById('details').value}`;location.href='mailto:DUAVERSECONSULTANCY@OUTLOOK.COM?subject='+encodeURIComponent('Yihe DuaVerse – China Sourcing Requirement')+'&body='+encodeURIComponent(body);}
 </script>
