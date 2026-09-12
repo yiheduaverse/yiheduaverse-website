@@ -30,3 +30,70 @@ html {
 section[id] {
   scroll-margin-top: 215px;
 }
+/* Final layout fix for What We Do and How It Works */
+
+#services,
+#process {
+  min-height: calc(100vh - 173px);
+  height: calc(100vh - 173px);
+  padding: 38px 6% 25px;
+  overflow: hidden;
+}
+
+#services .wrap,
+#process .wrap {
+  max-width: 1220px;
+  height: 100%;
+  margin: 0 auto;
+}
+
+#services .section-head {
+  margin-bottom: 22px;
+}
+
+#services .section-head > p {
+  margin: 0;
+}
+
+#services .cards {
+  gap: 14px;
+}
+
+#services .cards article {
+  min-height: 0;
+  height: 145px;
+  padding: 18px 22px;
+}
+
+#services .cards h3 {
+  font-size: 20px;
+  margin: 12px 0 6px;
+}
+
+#services .cards p {
+  font-size: 15px;
+  line-height: 1.4;
+}
+
+#process .center {
+  margin-bottom: 22px;
+}
+
+#process .process-grid {
+  gap: 8px 20px;
+}
+
+#process .process-grid > div {
+  padding: 12px 10px;
+  min-height: 105px;
+}
+
+#process .process-grid h3 {
+  font-size: 19px;
+  margin: 10px 0 6px;
+}
+
+#process .process-grid p {
+  font-size: 15px;
+  line-height: 1.4;
+}
