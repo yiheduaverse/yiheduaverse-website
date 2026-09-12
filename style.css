@@ -3,14 +3,14 @@
 /* Improve hero right-side slogan visibility */
 .hero-side-copy {
   color: #ffffff;
-  font-size: 20px;
+  font-size: 18px;
   font-weight: 800;
   line-height: 1.42;
   letter-spacing: 0.7px;
-  max-width: 285px;
+  max-width: 250px;
   margin-right: 1.5%;
   text-align: left;
-  padding: 22px 25px 22px 28px;
+  padding: 18px 20px 18px 24px;
   background: rgba(2, 34, 82, 0.88);
   border-left: 4px solid #e4aa1b;
   border-radius: 0 12px 12px 0;
