@@ -162,7 +162,56 @@ function send(e){e.preventDefault();const body=`Name: ${document.getElementById(
 #process .process-grid h3 {
   margin: 12px 0 7px;
 }
+/* Compact layout for What We Do and How It Works */
+#services,
+#process {
+  min-height: calc(100vh - 181px);
+  padding-top: 45px;
+  padding-bottom: 35px;
+}
 
+#services .section-head {
+  margin-bottom: 28px;
+}
+
+#services .cards {
+  gap: 16px;
+}
+
+#services .cards article {
+  min-height: 175px;
+  padding: 22px;
+}
+
+#services .cards h3 {
+  margin: 16px 0 8px;
+  font-size: 20px;
+}
+
+#services .cards p {
+  line-height: 1.45;
+}
+
+#process .center {
+  margin-bottom: 28px;
+}
+
+#process .process-grid {
+  gap: 14px 22px;
+}
+
+#process .process-grid > div {
+  padding: 18px 10px;
+}
+
+#process .process-grid h3 {
+  margin: 12px 0 7px;
+  font-size: 20px;
+}
+
+#process .process-grid p {
+  line-height: 1.45;
+}
 #process .process-grid p {
   line-height: 1.45;
 }
